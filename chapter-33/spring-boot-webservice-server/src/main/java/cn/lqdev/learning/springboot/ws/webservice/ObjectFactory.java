@@ -1,14 +1,17 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.7 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2018.11.08 时间 10:59:41 PM CST 
+// 此檔案是由 JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 所產生 
+// 請參閱 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 一旦重新編譯來源綱要, 對此檔案所做的任何修改都將會遺失. 
+// 產生時間: 2020.11.23 於 11:27:25 AM CST 
 //
 
 
 package cn.lqdev.learning.springboot.ws.webservice;
 
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.namespace.QName;
 
 
 /**
@@ -28,12 +31,22 @@ import javax.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _Comment_QNAME = new QName("http://tempuri.org/PurchaseOrderSchema.xsd", "comment");
+    private final static QName _PurchaseOrder_QNAME = new QName("http://tempuri.org/PurchaseOrderSchema.xsd", "purchaseOrder");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: cn.lqdev.learning.springboot.ws.webservice
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link Items }
+     * 
+     */
+    public Items createItems() {
+        return new Items();
     }
 
     /**
@@ -74,6 +87,80 @@ public class ObjectFactory {
      */
     public AuthorListResponse createAuthorListResponse() {
         return new AuthorListResponse();
+    }
+
+    /**
+     * Create an instance of {@link ItemListResponse }
+     * 
+     */
+    public ItemListResponse createItemListResponse() {
+        return new ItemListResponse();
+    }
+
+    /**
+     * Create an instance of {@link ShowPurchaseOrderRequest }
+     * 
+     */
+    public ShowPurchaseOrderRequest createShowPurchaseOrderRequest() {
+        return new ShowPurchaseOrderRequest();
+    }
+
+    /**
+     * Create an instance of {@link PurchaseOrderType }
+     * 
+     */
+    public PurchaseOrderType createPurchaseOrderType() {
+        return new PurchaseOrderType();
+    }
+
+    /**
+     * Create an instance of {@link ShowPurchaseOrderResponse }
+     * 
+     */
+    public ShowPurchaseOrderResponse createShowPurchaseOrderResponse() {
+        return new ShowPurchaseOrderResponse();
+    }
+
+    /**
+     * Create an instance of {@link ItemListRequest }
+     * 
+     */
+    public ItemListRequest createItemListRequest() {
+        return new ItemListRequest();
+    }
+
+    /**
+     * Create an instance of {@link USAddress }
+     * 
+     */
+    public USAddress createUSAddress() {
+        return new USAddress();
+    }
+
+    /**
+     * Create an instance of {@link Items.Item }
+     * 
+     */
+    public Items.Item createItemsItem() {
+        return new Items.Item();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/PurchaseOrderSchema.xsd", name = "comment")
+    public JAXBElement<String> createComment(String value) {
+        return new JAXBElement<String>(_Comment_QNAME, String.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PurchaseOrderType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/PurchaseOrderSchema.xsd", name = "purchaseOrder")
+    public JAXBElement<PurchaseOrderType> createPurchaseOrder(PurchaseOrderType value) {
+        return new JAXBElement<PurchaseOrderType>(_PurchaseOrder_QNAME, PurchaseOrderType.class, null, value);
     }
 
 }

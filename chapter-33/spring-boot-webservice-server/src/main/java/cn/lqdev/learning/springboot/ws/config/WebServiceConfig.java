@@ -25,7 +25,7 @@ import org.springframework.xml.xsd.XsdSchema;
 @EnableWs //开启webService
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter{
-		
+
 	@Bean
     public ServletRegistrationBean messageDispatcherServlet(ApplicationContext applicationContext) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
@@ -36,7 +36,7 @@ public class WebServiceConfig extends WsConfigurerAdapter{
 //        servlet.setMessageFactoryBeanName(messageFactoryBeanName);
         return new ServletRegistrationBean(servlet, "/ws/*");
     }
-	
+
 	//name 就是对应 wsdl名如 ：/ws/author.wsdl
     @Bean(name = "author")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema authorSchema) {
@@ -47,7 +47,18 @@ public class WebServiceConfig extends WsConfigurerAdapter{
         wsdl11Definition.setTargetNamespace(WsConst.NAMESPACE_URI);
         return wsdl11Definition;
     }
-    
+
+    //name 就是对应 wsdl名如 ：/ws/purchase.wsdl
+    @Bean(name = "purchase")
+    public DefaultWsdl11Definition defaultWsdl22Definition(XsdSchema purchaseSchema) {
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("PurchasePort");
+        wsdl11Definition.setLocationUri("/ws");
+        wsdl11Definition.setSchema(purchaseSchema);
+        wsdl11Definition.setTargetNamespace(WsConst.NAMESPACE_URI_PURCHASE);
+        return wsdl11Definition;
+    }
+
     //可自定义SaajSoapMessageFactory 然后指定其SOAP版本
     @Bean
     public SaajSoapMessageFactory messageFactory() {
@@ -56,14 +67,19 @@ public class WebServiceConfig extends WsConfigurerAdapter{
         messageFactory.setSoapVersion(SoapVersion.SOAP_11);//SoapVersion.SOAP_12
         return messageFactory;
     }
-    
+
     @Bean
     public XsdSchema authorSchema() {
         return new SimpleXsdSchema(new ClassPathResource("author.xsd"));
     }
-    
+
+    @Bean
+    public XsdSchema purchaseSchema() {
+        return new SimpleXsdSchema(new ClassPathResource("purchase.xsd"));
+    }
+
 	@Override
 	public void addInterceptors(List<EndpointInterceptor> interceptors) {
-		//可以自定义拦截器 
+		//可以自定义拦截器
 	}
 }

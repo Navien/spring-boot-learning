@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="author" type="{http://www.lqdev.cn/webservice}author" maxOccurs="unbounded"/>
+ *         &lt;element name="purchaseOrder" type="{http://tempuri.org/PurchaseOrderSchema.xsd}PurchaseOrderType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,41 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "author"
+    "purchaseOrder"
 })
-@XmlRootElement(name = "authorListResponse", namespace = "http://www.lqdev.cn/webservice")
-public class AuthorListResponse {
+@XmlRootElement(name = "showPurchaseOrderResponse")
+public class ShowPurchaseOrderResponse {
 
-    @XmlElement(namespace = "http://www.lqdev.cn/webservice", required = true)
-    protected List<Author> author;
+    @XmlElement(required = true)
+    protected List<PurchaseOrderType> purchaseOrder;
 
     /**
-     * Gets the value of the author property.
+     * Gets the value of the purchaseOrder property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the author property.
+     * This is why there is not a <CODE>set</CODE> method for the purchaseOrder property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getAuthor().add(newItem);
+     *    getPurchaseOrder().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Author }
+     * {@link PurchaseOrderType }
      * 
      * 
      */
-    public List<Author> getAuthor() {
-        if (author == null) {
-            author = new ArrayList<Author>();
+    public List<PurchaseOrderType> getPurchaseOrder() {
+        if (purchaseOrder == null) {
+            purchaseOrder = new ArrayList<PurchaseOrderType>();
         }
-        return this.author;
+        return this.purchaseOrder;
     }
 
 }

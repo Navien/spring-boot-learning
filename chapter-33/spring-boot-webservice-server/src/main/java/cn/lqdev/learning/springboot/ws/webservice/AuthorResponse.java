@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.7 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2018.11.08 时间 10:59:41 PM CST 
+// 此檔案是由 JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.7 所產生 
+// 請參閱 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 一旦重新編譯來源綱要, 對此檔案所做的任何修改都將會遺失. 
+// 產生時間: 2020.11.23 於 11:27:25 AM CST 
 //
 
 
@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>anonymous complex type的 Java 类。
+ * <p>anonymous complex type 的 Java 類別.
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>下列綱要片段會指定此類別中包含的預期內容.
  * 
  * <pre>
  * &lt;complexType>
@@ -38,14 +38,14 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "author"
 })
-@XmlRootElement(name = "authorResponse")
+@XmlRootElement(name = "authorResponse", namespace = "http://www.lqdev.cn/webservice")
 public class AuthorResponse {
 
-    @XmlElement(required = true)
+    @XmlElement(namespace = "http://www.lqdev.cn/webservice", required = true)
     protected Author author;
 
     /**
-     * 获取author属性的值。
+     * 取得 author 特性的值.
      * 
      * @return
      *     possible object is
@@ -57,7 +57,7 @@ public class AuthorResponse {
     }
 
     /**
-     * 设置author属性的值。
+     * 設定 author 特性的值.
      * 
      * @param value
      *     allowed object is

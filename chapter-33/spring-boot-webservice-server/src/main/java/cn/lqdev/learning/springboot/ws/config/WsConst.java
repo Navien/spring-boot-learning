@@ -7,4 +7,6 @@ package cn.lqdev.learning.springboot.ws.config;
  */
 public class WsConst {
 	public static final String NAMESPACE_URI = "http://www.lqdev.cn/webservice";
+
+	public static final String NAMESPACE_URI_PURCHASE = "http://tempuri.org/PurchaseOrderSchema.xsd";
 }

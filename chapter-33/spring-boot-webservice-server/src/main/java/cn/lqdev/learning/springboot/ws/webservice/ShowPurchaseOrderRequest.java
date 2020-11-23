@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="productName" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "name"
+    "productName"
 })
-@XmlRootElement(name = "authorRequest", namespace = "http://www.lqdev.cn/webservice")
-public class AuthorRequest {
+@XmlRootElement(name = "showPurchaseOrderRequest")
+public class ShowPurchaseOrderRequest {
 
-    @XmlElement(namespace = "http://www.lqdev.cn/webservice", required = true)
-    protected String name;
+    @XmlElement(required = true)
+    protected String productName;
 
     /**
-     * 取得 name 特性的值.
+     * 取得 productName 特性的值.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getName() {
-        return name;
+    public String getProductName() {
+        return productName;
     }
 
     /**
-     * 設定 name 特性的值.
+     * 設定 productName 特性的值.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setName(String value) {
-        this.name = value;
+    public void setProductName(String value) {
+        this.productName = value;
     }
 
 }

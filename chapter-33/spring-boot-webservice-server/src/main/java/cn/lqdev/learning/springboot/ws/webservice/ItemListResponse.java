@@ -8,6 +8,8 @@
 
 package cn.lqdev.learning.springboot.ws.webservice;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -25,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="items" type="{http://tempuri.org/PurchaseOrderSchema.xsd}Items" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "name"
+    "items"
 })
-@XmlRootElement(name = "authorRequest", namespace = "http://www.lqdev.cn/webservice")
-public class AuthorRequest {
+@XmlRootElement(name = "itemListResponse")
+public class ItemListResponse {
 
-    @XmlElement(namespace = "http://www.lqdev.cn/webservice", required = true)
-    protected String name;
-
-    /**
-     * 取得 name 特性的值.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getName() {
-        return name;
-    }
+    @XmlElement(required = true)
+    protected List<Items> items;
 
     /**
-     * 設定 name 特性的值.
+     * Gets the value of the items property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the items property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getItems().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Items }
+     * 
+     * 
      */
-    public void setName(String value) {
-        this.name = value;
+    public List<Items> getItems() {
+        if (items == null) {
+            items = new ArrayList<Items>();
+        }
+        return this.items;
     }
 
 }

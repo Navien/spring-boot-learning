@@ -25,7 +25,7 @@ import cn.lqdev.learning.springboot.ws.webservice.Sex;
 public class AuthorEndpoint {
 
     @PayloadRoot(namespace = WsConst.NAMESPACE_URI, localPart = "authorRequest")
-    @ResponsePayload 
+    @ResponsePayload
     public AuthorResponse getAuthor(@RequestPayload AuthorRequest authorReq){
     	AuthorResponse resp = new AuthorResponse();
     	Author author = new Author();
@@ -37,9 +37,9 @@ public class AuthorEndpoint {
     	resp.setAuthor(author);
     	return resp;
     }
-    
+
     @PayloadRoot(namespace = WsConst.NAMESPACE_URI, localPart = "authorListRequest")
-    @ResponsePayload 
+    @ResponsePayload
     public AuthorListResponse getAuthorList(@RequestPayload AuthorListRequest request){
     	AuthorListResponse resp = new AuthorListResponse();
     	Author author = new Author();
@@ -47,9 +47,16 @@ public class AuthorEndpoint {
     	author.setName("姓名：oKong");
     	author.setSex(Sex.FEMALE);
     	author.getHobby().addAll(Arrays.asList("电影","旅游"));
-    	author.setDescription("描述：一枚趔趄的猿。现在时间：" + new Date().getTime());
+    	author.setDescription("@@@@ 描述：一枚趔趄的猿。现在时间：" + new Date().getTime());
     	resp.getAuthor().add(author);
-    	resp.getAuthor().add(author);
+
+    	Author author2 = new Author();
+		author2.setBirthday("1990-01-23");
+		author2.setName("姓名：Navien");
+		author2.setSex(Sex.FEMALE);
+		author2.getHobby().addAll(Arrays.asList("电影","旅游","看直播"));
+		author2.setDescription("@@@@ 描述：一枚趔趄的猿。现在时间：" + new Date().getTime());
+    	resp.getAuthor().add(author2);
     	return resp;
     }
 }
