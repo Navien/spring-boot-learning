@@ -17,5 +17,6 @@
   <modules>
     <module>spring-boot-webservice-server</module>
     <module>spring-boot-webservice-client</module>
-</modules>
+      <module>ybd-webservice</module>
+  </modules>
 </project>
