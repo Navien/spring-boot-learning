@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2018.11.09 时间 12:50:26 AM CST 
+// 此檔案是由 JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.11 所產生 
+// 請參閱 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 一旦重新編譯來源綱要, 對此檔案所做的任何修改都將會遺失. 
+// 產生時間: 2020.11.20 於 04:35:12 PM CST 
 //
 
 
@@ -18,9 +18,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>anonymous complex type的 Java 类。
+ * <p>anonymous complex type 的 Java 類別.
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>下列綱要片段會指定此類別中包含的預期內容.
  * 
  * <pre>
  * &lt;complexType&gt;

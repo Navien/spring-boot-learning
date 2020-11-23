@@ -2,10 +2,10 @@
 <bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
   <!--
 
-此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
-请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-在重新编译源模式时, 对此文件的所有修改都将丢失。
-生成时间: 2018.11.09 时间 09:04:57 AM CST 
+此檔案是由 JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.11 所產生 
+請參閱 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+一旦重新編譯來源綱要, 對此檔案所做的任何修改都將會遺失. 
+產生時間: 2020.11.20 於 04:35:12 PM CST 
 
   -->
   <bindings xmlns:tns="http://www.lqdev.cn/webservice" if-exists="true" scd="x-schema::tns">
